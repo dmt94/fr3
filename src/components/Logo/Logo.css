@@ -3,9 +3,10 @@
   flex-direction: column;
   justify-content: center;
   align-content: center;
-  background: rgb(252, 250, 230);
+  background: rgba(236, 232, 238, 0.231);
   backdrop-filter: blur( 3.5px );
   -webkit-backdrop-filter: blur( 3.5px );
+  border: 1px solid rgb(154, 159, 255);
   
 }
 

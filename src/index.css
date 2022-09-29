@@ -7,6 +7,10 @@ body {
   color: white;
 }
 
+.margin-10px {
+  margin: 10px;
+}
+
 .center {
   display: flex;
   justify-content: center;
