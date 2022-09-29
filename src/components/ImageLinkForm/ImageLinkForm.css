@@ -1,0 +1,25 @@
+.form {
+  width: 700px;
+  background-color:rgba(212, 247, 251, 0.315);
+  background-image: 
+  linear-gradient(rgba(255,255,255,.3) 1px, transparent 1px),
+  linear-gradient(90deg, rgba(255,255,255,.3) 1px, transparent 1px);
+  background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+  background-position:-2px -2px, -2px -2px, -1px -1px, -1px -1px;
+  border: 1px solid;
+}
+
+.btn-custom {
+  background-color: rgb(243, 224, 146);
+  color: rgb(51, 51, 53);
+  border: black 1px solid;
+}
+
+input {
+  border: black 1px solid;
+}
+
+.btn-custom:hover {
+  background-color: rgb(189, 199, 255);
+  color:rgba(34, 101, 153, 0.933);
+}

@@ -1,0 +1,30 @@
+.Tilt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  background: rgb(252, 250, 230);
+  backdrop-filter: blur( 3.5px );
+  -webkit-backdrop-filter: blur( 3.5px );
+  
+}
+
+.inner-tilt img {
+  width: 120px;
+}
+
+.logo-div {
+  width: 152px;
+  /* box-shadow: rgba(184, 228, 253, 0.571) 0px 1px 2px; */
+}
+
+.logo-div:hover {
+  cursor: pointer;
+  border-radius: 100px;
+  background-color: rgba(240, 248, 255, 0.441);
+}
+
+.logo-div:hover .Tilt {
+  border-radius: 100px;
+  background: rgb(181, 197, 255);
+}
