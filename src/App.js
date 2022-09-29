@@ -9,8 +9,20 @@ import ParticlesBg from 'particles-bg';
 
 
 class App extends Component {
-  
-  
+  constructor() {
+    super();
+    this.state = {
+      input: '',
+    }
+  }
+
+  onInputChange = (event) => {
+    console.log(event.target.value);
+  }
+
+  onButtonSubmit = () => {
+    console.log('click');
+  }
   render () {
     let config = {
       num: [4, 7],
@@ -43,7 +55,7 @@ class App extends Component {
         <Navigation />
         <Logo />
         <Rank />
-        <ImageLinkForm />
+        <ImageLinkForm onInputChange={this.onInputChange} onButtonSubmit={this.onButtonSubmit}/>
     </div>
   );
 }
