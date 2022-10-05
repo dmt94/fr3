@@ -1,0 +1,84 @@
+.main-div-sign-in-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sign-in-card {
+  background-color: rgba(240, 248, 255, 0.908);
+  border-radius: 10px;
+  box-shadow: rgba(175, 205, 246, 0.603) 8.95px 8.95px 1px;
+  transition: all 800ms ease-in-out;
+}
+
+.sign-in-card:hover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transform: translate(8.95px,8.95px);
+  scale: 1.1;
+  background-color: rgba(253, 250, 238, 0.933);
+  border: 1px solid rgba(255, 255, 255, 0.564);
+}
+.sign-in-card:hover #email-title, 
+.sign-in-card:hover #pw-title,
+.sign-in-card:hover #sign-title
+{
+  color: white;
+}
+
+.signin-input {
+  background-color: rgba(187, 182, 232, 0.763);
+  color: black;
+  border: none;
+  border-radius: 8px;
+  margin-top: 3px;
+  box-shadow: rgba(124, 131, 138, 0.332) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+.signin-input:hover {
+  color: rgb(32, 87, 121);
+  background-color: rgba(242, 241, 255, 0.885);
+
+}
+
+.signin-input:focus {
+  outline: 2px solid rgba(52, 127, 248, 0.578);
+}
+
+#sign-in-btn {
+  border: none;
+  border-radius: 5px;
+  background-color: #c9f5ff3c;
+  color: rgb(50, 50, 182);
+  transition: all 500ms ease-in-out;
+  border: 1px solid rgba(19, 19, 197, 0.752);
+}
+
+#sign-in-btn:hover {
+  background-color: rgba(68, 80, 246, 0.848);
+  border: none;
+  color: rgba(247, 250, 255, 0.967);
+  /* box-shadow: rgba(124, 131, 138, 0.332) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px; */
+}
+
+/*Register*/
+.register-div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow-register {
+  width: 10px;
+  height: 10px;
+  margin-right: 5px;
+}
+
+.register-div:hover .arrow-register {
+  transform: translate(2.95px,0px);
+  opacity: 0.5;
+}
+
+.register-link {
+  color:rgba(23, 40, 190, 0.766);
+}

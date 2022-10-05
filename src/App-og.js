@@ -9,6 +9,7 @@ import Register from './components/Register/Register';
 import './App.css';
 import ParticlesBg from 'particles-bg';
 
+
 const initialState = {
   input: '',
   imageUrl: '', //should get displayed when button submit is clicked
@@ -23,12 +24,13 @@ const initialState = {
     joined: ''
   }
 }
+
 class App extends Component {
   constructor() {
     super();
     this.state = initialState;
   }
-//changes empty user state to the data passed
+
   loadUser = (data) => {
     this.setState({user: {
       id: data.id,
@@ -42,9 +44,11 @@ class App extends Component {
   calculateFaceLocation = (data) => {
     //bounding_box is percentage of the image 
     const clarifaiFace = data.outputs[0].data.regions[0].region_info.bounding_box;
+    
     const image = document.getElementById('inputimage'); //grabs image
     const width = Number(image.width);   //width of img
     const height = Number(image.height); //height of img
+
     //returns an object that will fill the box state object
     return {
       leftCol: clarifaiFace.left_col * width, //where left column
@@ -65,31 +69,59 @@ class App extends Component {
   onButtonSubmit = () => {
     //finalizes the input as the chosen iamgeUrl
     this.setState({imageUrl: this.state.input});
-    fetch('http://localhost:3000/imageurl', {
-        method: 'post',
-        headers: {'Content-Type': 'application/json'},
-        //request body has:
-        body: JSON.stringify({
-          input: this.state.input,
-        })
-      })
-      .then(res => res.json()).then(result => {
+
+    //CLARIFAI REST API
+    const USER_ID = 'buipj1i9q5ps';
+    // Your PAT (Personal Access Token) can be found in the portal under Authentification
+    const PAT = 'e05c24dcc15942f5905ebdaef68d1505';
+    const APP_ID = '7501446225b747c395a14c9c2c2f25a0';
+    // Change these to whatever model and image URL you want to use
+    const MODEL_ID = 'face-detection';
+    const MODEL_VERSION_ID = '6dc7e46bc9124c5c8824be4822abe105';    
+    const IMAGE_URL = this.state.input;
+    const raw = JSON.stringify({
+      "user_app_id": {
+          "user_id": USER_ID,
+          "app_id": APP_ID
+      },
+      "inputs": [
+          {
+              "data": {
+                  "image": {
+                      "url": IMAGE_URL
+                  }
+              }
+          }
+      ]
+  });
+  const requestOptions = {
+      method: 'POST',
+      headers: {
+          'Accept': 'application/json',
+          'Authorization': 'Key ' + PAT
+      },
+      body: raw
+  };
+
+  fetch("https://api.clarifai.com/v2/models/" + MODEL_ID + "/versions/" + MODEL_VERSION_ID + "/outputs", requestOptions)
+      .then(response => response.json())
+      .then(result => {
         if (result) {
           fetch('http://localhost:3000/image', {
             method: 'put',
             headers: {'Content-Type': 'application/json'},
-            //request body has:
             body: JSON.stringify({
               id: this.state.user.id,
             })
           })
-            .then(response => response.json())
-            .then(count => {
-              this.setState(Object.assign(this.state.user, { entries: count}))
-            })
+          .then(response => response.json())
+          .then(count => {
+            this.setState(Object.assign(this.state.user, { entries: count}))
+          })
         }
+        //giving result, passing the result that the server responds with after requesting to put image -->
         this.displayFaceBox(this.calculateFaceLocation(result));
-    })
+      })
       .catch(error => console.log('error', error));
       //END OF CLARIFAI REST API
   }//end of onButtonClick
@@ -150,12 +182,8 @@ class App extends Component {
             </div>
           : (
               route === 'signin'
-            ? <Signin 
-                loadUser={this.loadUser} 
-                onRouteChange={this.onRouteChange} />
-            : <Register 
-                loadUser={this.loadUser} 
-                onRouteChange={this.onRouteChange} />
+            ? <Signin loadUser={this.loadUser} onRouteChange={this.onRouteChange} />
+            : <Register loadUser={this.loadUser} onRouteChange={this.onRouteChange} />
           ) 
         }
     </div>

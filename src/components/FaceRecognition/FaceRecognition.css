@@ -1,0 +1,29 @@
+.img-specs {
+  height: auto;
+  width: 400px;
+  margin: 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  border-radius: 4px;
+}
+
+.img-backdrop {
+  box-shadow: rgba(170, 163, 206, 0.24) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  border-radius: 5px;
+  background-color: rgba(243, 236, 236, 0.045);
+  backdrop-filter: blur(5px);
+  margin: 10px;
+}
+
+.bounding-box {
+  position: absolute;
+  border: 2px solid rgb(42, 91, 226);
+  border-bottom: 5px solid rgb(53, 44, 218);
+  border-radius: 7px;
+  background-color: rgba(255, 255, 255, 0.123);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  justify-content: center;
+  cursor: pointer;
+}

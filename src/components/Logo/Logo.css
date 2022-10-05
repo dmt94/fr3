@@ -6,7 +6,7 @@
   background: rgba(236, 232, 238, 0.231);
   backdrop-filter: blur( 3.5px );
   -webkit-backdrop-filter: blur( 3.5px );
-  border: 1px solid rgb(154, 159, 255);
+  border: 1px solid rgba(80, 88, 246, 0.718);
   
 }
 
@@ -21,11 +21,10 @@
 
 .logo-div:hover {
   cursor: pointer;
-  border-radius: 100px;
-  background-color: rgba(240, 248, 255, 0.441);
 }
 
 .logo-div:hover .Tilt {
   border-radius: 100px;
-  background: rgb(181, 197, 255);
+  background: rgba(245, 247, 252, 0.846);
+  border: none;
 }
