@@ -65,7 +65,7 @@ class App extends Component {
   onButtonSubmit = () => {
     //finalizes the input as the chosen iamgeUrl
     this.setState({imageUrl: this.state.input});
-    fetch('http://localhost:3000/imageurl', {
+    fetch('https://frozen-eyrie-32291.herokuapp.com/imageurl', {
         method: 'post',
         headers: {'Content-Type': 'application/json'},
         //request body has:
@@ -75,7 +75,7 @@ class App extends Component {
       })
       .then(res => res.json()).then(result => {
         if (result) {
-          fetch('http://localhost:3000/image', {
+          fetch('https://frozen-eyrie-32291.herokuapp.com/image', {
             method: 'put',
             headers: {'Content-Type': 'application/json'},
             //request body has:
@@ -132,7 +132,7 @@ class App extends Component {
     };
   return (
     <div className="App">
-        <ParticlesBg className="particles" color="#BADAF8" config={config} type="cobweb" bg={true} />
+        <ParticlesBg className="particles" color="#FFFCD7" config={config} type="cobweb" bg={true} />
         <Navigation isSignedIn={isSignedIn} onRouteChange={this.onRouteChange} />
         { route === 'home' 
           ? <div> 
