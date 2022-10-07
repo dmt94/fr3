@@ -19,7 +19,7 @@ class Signin extends React.Component {
   }
   onSubmitSignIn = () => {
     // this.props.onRouteChange('home');
-    fetch('https://frozen-eyrie-32291.herokuapp.com/signin', {
+    fetch(`${process.env.SERVER_NAME}/signin`, {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
