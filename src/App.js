@@ -77,7 +77,6 @@ class App extends Component {
           input: this.state.input,
         })
       }).then(res => res.json()).then(res => {
-        console.log(res);
         if (res) {
           fetch('https://frozen-eyrie-32291.herokuapp.com/image', {
             method: 'put',
@@ -92,7 +91,6 @@ class App extends Component {
             })
         }
         this.displayFaceBox(this.calculateFaceLocation(res));
-        console.log(res);
     }).catch(error => console.log('error', error));
       //END OF CLARIFAI REST API
   }//end of onButtonClick
