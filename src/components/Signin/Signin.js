@@ -1,4 +1,4 @@
-import React, { useCallback, useReducer } from 'react';
+import React from 'react';
 import './Signin.css';
 import arrowImg from './arrow.png';
 
@@ -18,7 +18,6 @@ class Signin extends React.Component {
     this.setState({signInPassword: event.target.value})
   }
   onSubmitSignIn = () => {
-    // this.props.onRouteChange('home');
     fetch(`https://frozen-eyrie-32291.herokuapp.com/signin`, {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
