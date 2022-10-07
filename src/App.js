@@ -9,6 +9,12 @@ import Register from './components/Register/Register';
 import './App.css';
 import ParticlesBg from 'particles-bg';
 
+window.process = {
+  env: {
+      NODE_ENV: 'development'
+  }
+} 
+
 const initialState = {
   input: '',
   imageUrl: '', //should get displayed when button submit is clicked
@@ -51,7 +57,7 @@ class App extends Component {
       topRow: clarifaiFace.top_row * height,
       rightCol: width - (clarifaiFace.right_col * width),
       bottomRow: height - (clarifaiFace.bottom_row * height)
-    }
+    };
   }
 
   displayFaceBox = (box) => {
@@ -63,34 +69,31 @@ class App extends Component {
   }
 
   onButtonSubmit = () => {
-    //finalizes the input as the chosen iamgeUrl
     this.setState({imageUrl: this.state.input});
-    fetch('https://frozen-eyrie-32291.herokuapp.com/imageurl', {
+    fetch("https://frozen-eyrie-32291.herokuapp.com/imageurl", {
         method: 'post',
         headers: {'Content-Type': 'application/json'},
-        //request body has:
         body: JSON.stringify({
           input: this.state.input,
         })
-      })
-      .then(res => res.json()).then(result => {
-        if (result) {
+      }).then(res => res.json()).then(res => {
+        console.log(res);
+        if (res) {
           fetch('https://frozen-eyrie-32291.herokuapp.com/image', {
             method: 'put',
             headers: {'Content-Type': 'application/json'},
-            //request body has:
             body: JSON.stringify({
               id: this.state.user.id,
             })
           })
-            .then(response => response.json())
+            .then(res => res.json())
             .then(count => {
               this.setState(Object.assign(this.state.user, { entries: count}))
             })
         }
-        this.displayFaceBox(this.calculateFaceLocation(result));
-    })
-      .catch(error => console.log('error', error));
+        this.displayFaceBox(this.calculateFaceLocation(res));
+        console.log(res);
+    }).catch(error => console.log('error', error));
       //END OF CLARIFAI REST API
   }//end of onButtonClick
 
@@ -132,7 +135,7 @@ class App extends Component {
     };
   return (
     <div className="App">
-        <ParticlesBg className="particles" color="#FFFCD7" config={config} type="cobweb" bg={true} />
+        <ParticlesBg className="particles" color="#FFF6C4" config={config} type="cobweb" bg={true} />
         <Navigation isSignedIn={isSignedIn} onRouteChange={this.onRouteChange} />
         { route === 'home' 
           ? <div> 
