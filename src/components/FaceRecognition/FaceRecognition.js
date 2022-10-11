@@ -1,5 +1,5 @@
 import React from 'react';
-import BoundingBox from './components/BoundingBox/BoundingBox';
+// import BoundingBox from '../BoundingBox/BoundingBox';
 import './FaceRecognition.css';
 
 const FaceRecognition = ({imageUrl, box}) => {
