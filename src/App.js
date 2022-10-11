@@ -52,8 +52,21 @@ class App extends Component {
     const width = Number(image.width);   //width of img
     const height = Number(image.height); //height of img
     //returns an object that will fill the box state object
+
+    /* we are using the image width and height as reference to place the bounding box
+    since we are grabbing multiple faces in a photo (possibly), 
+    we need to return an array of objects, where each object in the array is the "person/face"
+    Each element should have:
+    - name of celebrity (add condition where value > 0.03) for celebrity name to get added
+    - [{
+        celebrityName: '', 
+        leftCol: ..., etc.
+      }]
+
+    > use .forEach on clarifaiFace to set the key-value pairs for each object
+    */
     return {
-      leftCol: clarifaiFace.left_col * width, //where left column
+      leftCol: clarifaiFace.left_col * width,
       topRow: clarifaiFace.top_row * height,
       rightCol: width - (clarifaiFace.right_col * width),
       bottomRow: height - (clarifaiFace.bottom_row * height)
@@ -90,7 +103,7 @@ class App extends Component {
               this.setState(Object.assign(this.state.user, { entries: count}))
             })
         }
-        console.log(res);
+        console.log(res.data.outputs[0].data.regions);
         this.displayFaceBox(this.calculateFaceLocation(res));
     }).catch(error => console.log('error', error));
       //END OF CLARIFAI REST API
@@ -132,6 +145,7 @@ class App extends Component {
           ctx.closePath();
       }
     };
+    //after state is set, properties are updated to reflect change
   return (
     <div className="App">
         <ParticlesBg className="particles" color="#FFF6C4" config={config} type="cobweb" bg={true} />
