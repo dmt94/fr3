@@ -117,7 +117,7 @@ class App extends Component {
         }
         // console.log(res.outputs[0].data.regions);
         this.displayFaceBox(this.calculateFaceLocation(res));
-        console.log(this.state.box);
+        console.log(this.calculateFaceLocation(res));
     }).catch(error => console.log('error', error));
       //END OF CLARIFAI REST API
   }//end of onButtonClick
