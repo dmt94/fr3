@@ -47,7 +47,7 @@ class App extends Component {
 
   calculateFaceLocation = (data) => {
     //bounding_box is percentage of the image 
-    const clarifaiFace = data.outputs[0].data.regions[0].region_info.bounding_box;
+    const clarifaiFace = data.outputs[0].data.regions;
     const image = document.getElementById('inputimage'); //grabs image
     const width = Number(image.width);   //width of img
     const height = Number(image.height); //height of img
@@ -65,16 +65,29 @@ class App extends Component {
 
     > use .forEach on clarifaiFace to set the key-value pairs for each object
     */
+   const arrayOfPeople = [];
+   clarifaiFace.forEach(person => {
+    arrayOfPeople.push(
+      {
+        name: person.data.concepts[0].name,
+        value: person.data.concepts[0].value,
+        boundingBox: {
+          leftCol: person.region_info.bounding_box.left_col * width,
+          topRow: person.region_info.bounding_box.top_row * height,
+          rightCol: width - (person.region_info.bounding_box.right_col * width),
+          bottomRow: height - (person.region_info.bounding_box.bottom_row * height),
+        }
+      }
+      )
+  })
     return {
-      leftCol: clarifaiFace.left_col * width,
-      topRow: clarifaiFace.top_row * height,
-      rightCol: width - (clarifaiFace.right_col * width),
-      bottomRow: height - (clarifaiFace.bottom_row * height)
+      faceRecognized: arrayOfPeople
     };
   }
 
   displayFaceBox = (box) => {
     this.setState({box: box});
+    console.log(this.state.box.faceRecognized);
   }
 
   onInputChange = (event) => {
@@ -103,7 +116,7 @@ class App extends Component {
               this.setState(Object.assign(this.state.user, { entries: count}))
             })
         }
-        console.log(res.outputs[0].data.regions);
+        // console.log(res.outputs[0].data.regions);
         this.displayFaceBox(this.calculateFaceLocation(res));
     }).catch(error => console.log('error', error));
       //END OF CLARIFAI REST API

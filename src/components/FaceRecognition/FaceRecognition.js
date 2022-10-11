@@ -1,4 +1,5 @@
 import React from 'react';
+import BoundingBox from './components/BoundingBox/BoundingBox';
 import './FaceRecognition.css';
 
 const FaceRecognition = ({imageUrl, box}) => {
@@ -12,15 +13,7 @@ const FaceRecognition = ({imageUrl, box}) => {
           id='inputimage'
           />
         <div 
-          className='bounding-box'
-          style={
-            {
-              top: box.topRow, 
-              right: box.rightCol,
-              bottom: box.bottomRow,
-              left: box.leftCol,
-            }
-          }
+          className='bounding-box-list'
           >
         </div>
       </div>
