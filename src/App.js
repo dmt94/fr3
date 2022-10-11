@@ -69,6 +69,7 @@ class App extends Component {
    clarifaiFace.forEach(person => {
     arrayOfPeople.push(
       {
+        id: person.id,
         name: person.data.concepts[0].name,
         value: person.data.concepts[0].value,
         boundingBox: {
