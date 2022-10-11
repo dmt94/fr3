@@ -90,6 +90,7 @@ class App extends Component {
               this.setState(Object.assign(this.state.user, { entries: count}))
             })
         }
+        console.log(res);
         this.displayFaceBox(this.calculateFaceLocation(res));
     }).catch(error => console.log('error', error));
       //END OF CLARIFAI REST API
