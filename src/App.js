@@ -87,7 +87,7 @@ class App extends Component {
 
   displayFaceBox = (box) => {
     this.setState({box: box});
-    console.log(this.state.box.faceRecognized);
+    console.log(this.state.box);
   }
 
   onInputChange = (event) => {
