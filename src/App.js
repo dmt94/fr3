@@ -87,7 +87,6 @@ class App extends Component {
 
   displayFaceBox = (box) => {
     this.setState({box: box});
-    console.log(this.state.box);
   }
 
   onInputChange = (event) => {
@@ -118,6 +117,8 @@ class App extends Component {
         }
         // console.log(res.outputs[0].data.regions);
         this.displayFaceBox(this.calculateFaceLocation(res));
+        console.log(this.state.box);
+        console.log(this.state.box.faceRecognized);
     }).catch(error => console.log('error', error));
       //END OF CLARIFAI REST API
   }//end of onButtonClick
