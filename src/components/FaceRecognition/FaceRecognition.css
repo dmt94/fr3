@@ -14,7 +14,7 @@
   margin: 10px;
 }
 
-.bounding-box {
+/* .bounding-box {
   position: absolute;
   border: 2px solid rgb(191, 206, 245);
   border-bottom: 9px solid rgb(116, 153, 239);
@@ -31,7 +31,7 @@
 
 .bounding-box:hover {
   background-color: rgba(195, 129, 60, 0.042);
-}
+} */
 
 #inputimage {
   transition: all 900ms ease-in-out;
