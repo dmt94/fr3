@@ -16,7 +16,11 @@ const FaceRecognition = ({imageUrl, box}) => {
           className='bounding-box-list'
           >
            {
-            console.log(faceRecognized)
+            faceRecognized?.map((person) => {
+              return (
+                <BoundingBox person={person} />
+              )
+            })
             } 
             
         </div>
