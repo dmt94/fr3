@@ -2,6 +2,7 @@ import BoundingBox from '../BoundingBox/BoundingBox';
 import './FaceRecognition.css';
 
 const FaceRecognition = ({imageUrl, box}) => {
+  const { faceRecognized } = box;
   return (
     <div className='center'>
       <div className='img-backdrop center'>
@@ -15,10 +16,9 @@ const FaceRecognition = ({imageUrl, box}) => {
           className='bounding-box-list'
           >
            {
-            box.this.faceRecognized.forEach(object => {
+            faceRecognized.forEach(object => {
               console.log(object)
             })
-            // console.log(Array.isArray(box.faceRecognized))
             } 
             
         </div>
