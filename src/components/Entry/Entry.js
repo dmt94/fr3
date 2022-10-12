@@ -16,7 +16,7 @@ const Entry = ({name, entries, clear}) => {
           {entries}
         </div>
         <button 
-            className='clear-btn grow'
+            className='clear-btn grow w-25'
             onClick={clear}
             >CLEAR
         </button>

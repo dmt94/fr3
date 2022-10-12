@@ -7,6 +7,7 @@
 .main-logo-entry-div {
   display: flex;
   flex-direction: row;
+  
 }
 
 .entry-count-div {
@@ -35,9 +36,12 @@
   color: rgb(47, 40, 56);
   font-weight: 700;
   transition: all 500ms ease-in-out;
+  letter-spacing: 2px;
+  padding: 2px;
 }
 
 .clear-btn:hover {
   background: rgba(74, 74, 74, 0.84);
   color:rgba(255, 255, 255, 0.84);
+  border: none;
 }
