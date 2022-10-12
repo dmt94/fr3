@@ -25,7 +25,6 @@
   visibility: visible;
   transition: all 100ms ease-in-out;
   background-color: rgba(247, 241, 190, 0.632);
-  padding: 1px;
 }
 
 .celebrity-name {
