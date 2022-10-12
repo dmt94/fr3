@@ -22,12 +22,12 @@
 }
 
 .bounding-box:hover {
-  background-color: rgba(195, 129, 60, 0.042);
+  background-color: rgba(99, 80, 60, 0.137);
   transition: all 500ms ease-in-out;
 }
 .bounding-box:hover .celebrity-name {
   visibility: visible;
-  transition: all 500ms ease-in-out;
+  transition: all 100ms ease-in-out;
 }
 
 .celebrity-name {
@@ -38,5 +38,5 @@
   background-color: rgba(0, 0, 0, 0.708);
   height: auto;
   visibility: hidden;
-  transition: all 500ms ease-in-out;
+  transition: all 100ms ease-in-out;
 }
