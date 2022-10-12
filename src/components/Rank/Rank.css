@@ -7,3 +7,14 @@
   letter-spacing: 1.5px;
   font-weight: 700;
 }
+
+.main-logo-entry-div {
+  display: flex;
+  flex-direction: row;
+}
+
+.entry-count-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
