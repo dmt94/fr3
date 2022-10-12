@@ -28,7 +28,6 @@
 .celebrity-name {
   display: flex;
   text-align: center;
-  align-self: flex-end;
   font-size: 7px;
   font-weight: 500;
   background-color: rgba(0, 0, 0, 0.708);
