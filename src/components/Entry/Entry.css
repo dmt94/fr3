@@ -1,0 +1,43 @@
+.entry-info {
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+}
+
+.main-logo-entry-div {
+  display: flex;
+  flex-direction: row;
+}
+
+.entry-count-div {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.entry-count-div > .entry-info {
+  font-size: 15px;
+}
+
+.entry-count-div .entry-number {
+  color: rgb(210, 245, 142);
+  text-align: center;
+  margin: 4px 0 4px 0;
+}
+
+.clear-btn {
+  background: rgba(255, 255, 255, 0.84);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.8px);
+  -webkit-backdrop-filter: blur(5.8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgb(47, 40, 56);
+  font-weight: 700;
+  transition: all 500ms ease-in-out;
+}
+
+.clear-btn:hover {
+  background: rgba(74, 74, 74, 0.84);
+  color:rgba(255, 255, 255, 0.84);
+}

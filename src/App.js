@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Navigation from './components/Navigation/Navigation';
 import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm';
-import Rank from './components/Rank/Rank';
+import Entry from './components/Entry/Entry';
 import FaceRecognition from './components/FaceRecognition/FaceRecognition';
 import Signin from './components/Signin/Signin';
 import Register from './components/Register/Register';
@@ -182,7 +182,7 @@ class App extends Component {
         <Navigation isSignedIn={isSignedIn} onRouteChange={this.onRouteChange} />
         { route === 'home' 
           ? <div> 
-              <Rank 
+              <Entry 
                 clear={this.onClearButtonSubmit}
                 name={this.state.user.name} 
                 entries={this.state.user.entries}  />
