@@ -8,7 +8,8 @@ class Signin extends React.Component {
     super(props);
     this.state = {
       signInEmail: '',
-      signInPassword: ''
+      signInPassword: '',
+      invalidCredentials: false
     }
   }
   onEmailChange = (event) => {
@@ -17,6 +18,12 @@ class Signin extends React.Component {
   onPasswordChange = (event) => {
     this.setState({signInPassword: event.target.value})
   }
+
+  onWrongCredentials = () => {
+    this.setState({invalidCredentials: true})
+  }
+
+
   onSubmitSignIn = () => {
     fetch(`https://frozen-eyrie-32291.herokuapp.com/signin`, {
       method: 'post',
@@ -30,6 +37,8 @@ class Signin extends React.Component {
         if (user.id) {
           this.props.loadUser(user);
           this.props.onRouteChange('home');
+        } else {
+          this.onWrongCredentials()
         }
     })
   }
@@ -66,6 +75,9 @@ class Signin extends React.Component {
                     />
                 </div>
               </fieldset>
+              <div className='ivalid-div'>
+                <p className='invalid-credential-warning'>Invalid Credentials. Check that your information is correct.</p>
+              </div>
               <div className="">
                 <input 
                   //onClick calls this function 

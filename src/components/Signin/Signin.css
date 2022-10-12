@@ -83,3 +83,10 @@
 .register-link {
   color:rgba(23, 40, 190, 0.766);
 }
+
+/*Warning*/
+.invalid-credential-warning {
+  color: darkviolet;
+  font-weight: 700;
+  text-transform: uppercase;
+}
