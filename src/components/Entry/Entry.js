@@ -1,5 +1,5 @@
 import React from 'react';
-import './Rank.css';
+import './Entry.css';
 import Logo from '../Logo/Logo';
 
 const Entry = ({name, entries, clear}) => {
