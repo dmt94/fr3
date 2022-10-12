@@ -109,31 +109,34 @@ class App extends Component {
   }
 
   onButtonSubmit = () => {
-    this.setState({imageUrl: this.state.input});
-    fetch("https://frozen-eyrie-32291.herokuapp.com/imageurl", {
-        method: 'post',
-        headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({
-          input: this.state.input,
-        })
-      }).then(res => res.json()).then(res => {
-        if (res) {
-          fetch('https://frozen-eyrie-32291.herokuapp.com/image', {
-            method: 'put',
-            headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify({
-              id: this.state.user.id,
-            })
+    if (this.state.input !== this.state.imageUrl && this.state.input.length > 1) {
+      this.setState({imageUrl: this.state.input});
+      fetch("https://frozen-eyrie-32291.herokuapp.com/imageurl", {
+          method: 'post',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({
+            input: this.state.input,
           })
-            .then(res => res.json())
-            .then(count => {
-              this.setState(Object.assign(this.state.user, { entries: count}))
+        }).then(res => res.json()).then(res => {
+          if (res) {
+            fetch('https://frozen-eyrie-32291.herokuapp.com/image', {
+              method: 'put',
+              headers: {'Content-Type': 'application/json'},
+              body: JSON.stringify({
+                id: this.state.user.id,
+              })
             })
-        }
-        console.log(res.outputs[0].data.regions);
-        this.displayFaceBox(this.calculateFaceLocation(res));
-    }).catch(error => console.log('error', error));
-      //END OF CLARIFAI REST API
+              .then(res => res.json())
+              .then(count => {
+                this.setState(Object.assign(this.state.user, { entries: count}))
+              })
+          }
+          console.log(res.outputs[0].data.regions);
+          this.displayFaceBox(this.calculateFaceLocation(res));
+      }).catch(error => console.log('error', error));
+        //END OF CLARIFAI REST API
+    }
+   
   }//end of onButtonClick
 
   onRouteChange = (route) => {
