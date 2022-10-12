@@ -24,6 +24,9 @@
 .bounding-box:hover {
   background-color: rgba(195, 129, 60, 0.042);
 }
+.bounding-box:hover .celebrity-name {
+  visibility: visible;
+}
 
 .celebrity-name {
   display: flex;
@@ -32,4 +35,5 @@
   font-weight: 500;
   background-color: rgba(0, 0, 0, 0.708);
   height: auto;
+  visibility: hidden;
 }
