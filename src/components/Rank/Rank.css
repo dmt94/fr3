@@ -18,3 +18,7 @@
   flex-direction: column;
   justify-content: flex-start;
 }
+
+.entry-count-div > .entry-info {
+  font-size: 15px;
+}
