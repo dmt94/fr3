@@ -22,7 +22,7 @@
 }
 
 input {
-  border: black 1px solid;
+  border: none;
 }
 
 .btn-custom:hover {
