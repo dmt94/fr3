@@ -25,7 +25,9 @@ const initialState = {
     name: '',
     email: '',
     entries: 0,
-    joined: ''
+    joined: '',
+    faceCount: 0,
+    celebrityCount: 0
   }
 }
 class App extends Component {
@@ -40,7 +42,9 @@ class App extends Component {
       name: data.name,
       email: data.email,
       entries: data.entries,
-      joined: data.joined
+      joined: data.joined,
+      faceCount: 0,
+      celebrityCount: 0
     }})
   }
 
@@ -128,11 +132,12 @@ class App extends Component {
             })
               .then(res => res.json())
               .then(count => {
-                this.setState(Object.assign(this.state.user, { entries: count}))
+                this.setState(Object.assign(this.state.user, { entries: count }))
               })
           }
           console.log(res.outputs[0].data.regions);
           this.displayFaceBox(this.calculateFaceLocation(res));
+          //create function that counts number of faces and number of celebrity faces
       }).catch(error => console.log('error', error));
         //END OF CLARIFAI REST API
     }

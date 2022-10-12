@@ -29,7 +29,7 @@
 
 .clear-btn {
   background: rgba(238, 237, 255, 0.644);
-  border-radius: 16px;
+  border-radius: 9px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5.8px);
   -webkit-backdrop-filter: blur(5.8px);
@@ -38,7 +38,7 @@
   font-weight: 700;
   transition: all 500ms ease-in-out;
   letter-spacing: 2px;
-  padding: 4px;
+  padding: 8px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   align-self: center;
 }

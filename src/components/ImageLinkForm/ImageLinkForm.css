@@ -34,7 +34,6 @@ input {
 .btn-custom:hover {
   background-color: rgb(189, 199, 255);
   color:rgba(34, 101, 153, 0.933);
-  box-shadow: rgba(29, 107, 252, 0.317) 0px 0px 3px;
 }
 
 .instruction {
