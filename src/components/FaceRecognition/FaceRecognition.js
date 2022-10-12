@@ -15,9 +15,6 @@ const FaceRecognition = ({imageUrl, box}) => {
         <div 
           className='bounding-box-list'
           >
-            {
-              box
-            }
         </div>
       </div>
 
