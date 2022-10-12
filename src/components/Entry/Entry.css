@@ -27,21 +27,24 @@
 }
 
 .clear-btn {
-  background: rgba(255, 255, 255, 0.84);
+  background: rgba(238, 237, 255, 0.644);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5.8px);
   -webkit-backdrop-filter: blur(5.8px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: rgb(47, 40, 56);
+  border: 1px solid rgba(255, 246, 246, 0.138);
+  color: rgb(56, 55, 40);
   font-weight: 700;
   transition: all 500ms ease-in-out;
   letter-spacing: 2px;
   padding: 2px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .clear-btn:hover {
-  background: rgba(74, 74, 74, 0.84);
+  background: linear-gradient(116deg, #303450b7, #59446abc);
   color:rgba(255, 255, 255, 0.84);
-  border: none;
+  border: 0.5px rgb(240, 236, 209);
+  letter-spacing: 2px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
