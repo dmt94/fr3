@@ -27,6 +27,7 @@
 
 .celebrity-name {
   display: flex;
+  text-align: center;
   align-self: flex-end;
   font-size: 7px;
   font-weight: 500;
