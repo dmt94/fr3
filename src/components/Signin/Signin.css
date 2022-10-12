@@ -28,7 +28,7 @@
 .signin-input {
   background-color: rgba(198, 192, 255, 0.892);
   color: black;
-  border: none;
+  border: 1px solid white;
   border-radius: 8px;
   margin-top: 3px;
   box-shadow: rgba(124, 131, 138, 0.332) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
