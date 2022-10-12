@@ -90,7 +90,7 @@ class App extends Component {
   }
 
   onClearButtonSubmit = () => {
-    this.setState({entries : 0})
+    this.setState(Object.assign(this.state.user, { entries: 0}))
   }
 
   onInputChange = (event) => {
