@@ -86,10 +86,11 @@
 
 /*Warning*/
 .invalid-credential-warning, .welcome-message {
-  color: darkviolet;
+  color: rgb(175, 31, 31);
   font-weight: 700;
   text-transform: uppercase;
-  font-size: 8px;
+  font-size: 10px;
+  margin: 8px;
 }
 
 .valid-div > .welcome-message {
