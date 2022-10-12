@@ -87,7 +87,6 @@ class App extends Component {
   }
 
   displayFaceBox = (data) => {
-    console.log(data.faceRecognized)
     this.setState({box: data});
   }
 
