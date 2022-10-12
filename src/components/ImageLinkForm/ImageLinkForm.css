@@ -12,9 +12,9 @@
 
 .btn-custom {
   background-color: rgb(154, 146, 243);
-  color: rgb(255, 255, 235);
+  color: rgb(32, 19, 79);
   border: none;
-  box-shadow: rgba(255, 251, 231, 0.937) 7px 6px 3px;
+  box-shadow: rgb(32, 19, 79) 7px 6px 1px;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: 500;
