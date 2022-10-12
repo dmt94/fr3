@@ -44,58 +44,58 @@ class Register extends React.Component {
     const { onRouteChange} = this.props;
     return (
       <div className='main-div-sign-in-card'>
-         <article className="b--black-10 mv4 w-100 w-50-m w-25-l mw5 center sign-in-card main-div-sign-in-card">
-        <main className="pa4 black-80">
-          <div className="measure">
-            <fieldset id="sign_up" className="ba b--transparent ph0 mh0">
-              <legend className="f4 fw6 ph0 mh0">Register</legend>
-              <div className="mt3">
-                <label className="db fw6 lh-copy f6" htmlFor="name">Name</label>
+         <form className="b--black-10 mv4 w-100 w-50-m w-25-l mw5 center sign-in-card main-div-sign-in-card">
+          <main className="pa4 black-80">
+            <div className="measure">
+              <fieldset id="sign_up" className="ba b--transparent ph0 mh0">
+                <legend className="f4 fw6 ph0 mh0">Register</legend>
+                <div className="mt3">
+                  <label className="db fw6 lh-copy f6" htmlFor="name">Name</label>
+                  <input 
+                    className="register-input signin-input pa2 input-reset w-100" 
+                    type="text" 
+                    name="name"  
+                    id="name" 
+                    onChange={this.onNameChange}
+                    />
+                </div>
+    
+                <div className="mt3">
+                  <label className="db fw6 lh-copy f6" htmlFor="email-address">Email</label>
+                  <input 
+                    autoComplete='on' 
+                    className="register-input signin-input pa2 input-reset w-100" 
+                    type="email" 
+                    name="email-address"  
+                    id="email-address" 
+                    onChange={this.onEmailChange}
+                    />
+                </div>
+                <div className="mv3">
+                  <label className="db fw6 lh-copy f6" htmlFor="password">Password</label>
+                  <input 
+                    autoComplete='on' 
+                    className="register-input signin-input b pa2 input-reset w-100" 
+                    type="password" 
+                    name="password"  
+                    id="password"
+                    onChange={this.onPasswordChange}
+                    />
+                </div>
+              </fieldset>
+              <div className="">
                 <input 
-                  className="register-input signin-input pa2 input-reset w-100" 
-                  type="text" 
-                  name="name"  
-                  id="name" 
-                  onChange={this.onNameChange}
-                  />
-              </div>
-  
-              <div className="mt3">
-                <label className="db fw6 lh-copy f6" htmlFor="email-address">Email</label>
-                <input 
-                  autoComplete='on' 
-                  className="register-input signin-input pa2 input-reset w-100" 
-                  type="email" 
-                  name="email-address"  
-                  id="email-address" 
-                  onChange={this.onEmailChange}
-                  />
-              </div>
-              <div className="mv3">
-                <label className="db fw6 lh-copy f6" htmlFor="password">Password</label>
-                <input 
-                  autoComplete='on' 
-                  className="register-input signin-input b pa2 input-reset w-100" 
-                  type="password" 
-                  name="password"  
-                  id="password"
-                  onChange={this.onPasswordChange}
-                  />
-              </div>
-            </fieldset>
-            <div className="">
-              <input 
-                //onClick calls this function 
-                onClick={this.onSubmitSignIn}
-                id="sign-in-btn" 
-                className="b ph3 pv2 input-reset ba b--black grow pointer f6 dib" 
-                type="submit" 
-                value="Register"
-              />
-              </div>
-          </div>
-        </main>
-      </article>
+                  //onClick calls this function 
+                  onClick={this.onSubmitSignIn}
+                  id="sign-in-btn" 
+                  className="b ph3 pv2 input-reset ba b--black grow pointer f6 dib" 
+                  type="submit" 
+                  value="Register"
+                />
+                </div>
+            </div>
+          </main>
+      </form>
       </div>
     );
   }
