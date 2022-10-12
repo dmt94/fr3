@@ -22,7 +22,7 @@
 .entry-count-div .entry-number {
   color: rgb(210, 245, 142);
   text-align: center;
-  margin: 4px 0 4px 0;
+  margin: 8px 0 8px 0;
 }
 
 .clear-btn {
@@ -36,15 +36,17 @@
   font-weight: 700;
   transition: all 500ms ease-in-out;
   letter-spacing: 2px;
-  padding: 2px;
+  padding: 4px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   align-self: center;
 }
 
 .clear-btn:hover {
   background: linear-gradient(116deg, #303450b7, #59446abc);
-  color:rgba(255, 255, 255, 0.84);
+  color:rgba(255, 249, 213, 0.84);
   border: 0.5px rgb(240, 236, 209);
   letter-spacing: 2px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border: 0.7px solid rgb(255, 244, 207);
+  transition: all 500ms ease-in-out;
 }
