@@ -30,3 +30,8 @@ input {
   color:rgba(34, 101, 153, 0.933);
   box-shadow: rgba(29, 107, 252, 0.317) 0px 0px 3px;
 }
+
+.instruction {
+  font-size: 11px;
+  color:rgb(250, 246, 215)
+}

@@ -4,7 +4,7 @@ import './ImageLinkForm.css';
 const ImageLinkForm = ({ onInputChange, onButtonSubmit }) => {
   return (
     <div className='margin-10px'>
-        <p className='f3'>
+        <p className='f3 instruction'>
           {'Copy and paste your image url below to detect face.'}
         </p>
         <div className='center'>
