@@ -75,9 +75,15 @@ class Signin extends React.Component {
                     />
                 </div>
               </fieldset>
-              <div className='ivalid-div'>
-                <p className='invalid-credential-warning'>Invalid Credentials. Check that your information is correct.</p>
-              </div>
+              {
+                this.state.invalidCredentials === true ? 
+                <div className='ivalid-div'>
+                  <p className='invalid-credential-warning'>Invalid Credentials. Check that your information is correct.</p>
+                </div> : 
+                <div className='valid-div'>
+                  <p className='welcome-message'>Welcome!</p>
+                </div> 
+              }
               <div className="">
                 <input 
                   //onClick calls this function 
