@@ -1,4 +1,4 @@
-// import BoundingBox from '../BoundingBox/BoundingBox';
+import BoundingBox from '../BoundingBox/BoundingBox';
 import './FaceRecognition.css';
 
 const FaceRecognition = ({imageUrl, box}) => {
@@ -14,7 +14,10 @@ const FaceRecognition = ({imageUrl, box}) => {
         <div 
           className='bounding-box-list'
           >
-            {console.log(box)}
+            {box.map((person) => {
+              return(
+              <BoundingBox person={person} />
+            )})}
         </div>
       </div>
 
