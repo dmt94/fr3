@@ -90,7 +90,17 @@ class App extends Component {
   }
 
   onClearButtonSubmit = () => {
-    this.setState(Object.assign(this.state.user, { entries: 0 }))
+    fetch('https://frozen-eyrie-32291.herokuapp.com/clear', {
+      method: 'put',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({
+        id: this.state.user.id,
+      })
+    })
+      .then(res => res.json())
+      .then(newEntry => {
+        this.setState(Object.assign(this.state.user, { entries: newEntry}))
+      })
   }
 
   onInputChange = (event) => {
@@ -116,7 +126,7 @@ class App extends Component {
           })
             .then(res => res.json())
             .then(count => {
-              this.setState(Object.assign(this.state.user, { entries: this.state.entries + 1 }))
+              this.setState(Object.assign(this.state.user, { entries: count}))
             })
         }
         console.log(res.outputs[0].data.regions);
