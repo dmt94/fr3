@@ -23,17 +23,20 @@
 
 .bounding-box:hover {
   background-color: rgba(195, 129, 60, 0.042);
+  transition: all 500ms ease-in-out;
 }
 .bounding-box:hover .celebrity-name {
   visibility: visible;
+  transition: all 500ms ease-in-out;
 }
 
 .celebrity-name {
   display: flex;
   text-align: center;
-  font-size: 7px;
+  font-size: 12px;
   font-weight: 500;
   background-color: rgba(0, 0, 0, 0.708);
   height: auto;
   visibility: hidden;
+  transition: all 500ms ease-in-out;
 }
