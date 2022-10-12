@@ -21,7 +21,7 @@ const FaceRecognition = ({imageUrl, box}) => {
             //   <BoundingBox person={personObject} />
             //   )}
             // )
-            console.log(box.faceRecognized)
+            console.log(Array.isArray(box.faceRecognized))
             } 
             
         </div>
