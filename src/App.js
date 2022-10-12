@@ -90,7 +90,7 @@ class App extends Component {
   }
 
   onClearButtonSubmit = () => {
-    this.setState(Object.assign(this.state.user, { entries: 0}))
+    this.setState(Object.assign(this.state.user, { entries: 0 }))
   }
 
   onInputChange = (event) => {
@@ -116,7 +116,7 @@ class App extends Component {
           })
             .then(res => res.json())
             .then(count => {
-              this.setState(Object.assign(this.state.user, { entries: count}))
+              this.setState(Object.assign(this.state.user, { entries: this.state.entries + 1 }))
             })
         }
         console.log(res.outputs[0].data.regions);
