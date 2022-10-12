@@ -35,8 +35,10 @@
   text-align: center;
   font-size: 12px;
   font-weight: 500;
-  background-color: rgba(0, 0, 0, 0.708);
+  background-color: rgba(247, 241, 190, 0.708);
   height: auto;
   visibility: hidden;
   transition: all 100ms ease-in-out;
+  color: black;
+  padding: 1px;
 }
