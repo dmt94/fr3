@@ -99,6 +99,7 @@ class App extends Component {
     })
       .then(res => res.json())
       .then(newEntry => {
+        console.log(newEntry);
         this.setState(Object.assign(this.state.user, { entries: newEntry}))
       })
   }
