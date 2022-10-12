@@ -16,7 +16,7 @@
 .entry-count-div {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  text-align: left;
 }
 
 .entry-count-div > .entry-info {

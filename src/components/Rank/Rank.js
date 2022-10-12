@@ -2,7 +2,7 @@ import React from 'react';
 import './Rank.css';
 import Logo from '../Logo/Logo';
 
-const Rank = ({name, entries}) => {
+const Rank = ({name, entries, clear}) => {
   return (
     <div className='main-logo-entry-div'>
       <div className='logo-area'>
@@ -15,6 +15,11 @@ const Rank = ({name, entries}) => {
         <div className='rank-number f1'>
           {entries}
         </div>
+        <button 
+            className='clear-btn'
+            onClick={clear}
+            >CLEAR
+        </button>
       </div>
     </div>
   )

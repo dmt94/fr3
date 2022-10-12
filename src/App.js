@@ -89,6 +89,10 @@ class App extends Component {
     this.setState({box: data});
   }
 
+  onClearButtonSubmit = () => {
+    this.setState({entries : 0})
+  }
+
   onInputChange = (event) => {
     this.setState({input: event.target.value});
   }
@@ -165,6 +169,7 @@ class App extends Component {
         { route === 'home' 
           ? <div> 
               <Rank 
+                clear={this.onClearButtonSubmit}
                 name={this.state.user.name} 
                 entries={this.state.user.entries}  />
               <ImageLinkForm 
