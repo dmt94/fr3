@@ -119,6 +119,7 @@ class App extends Component {
         }
         // console.log(res.outputs[0].data.regions);
         this.displayFaceBox(this.calculateFaceLocation(res));
+        console.log(this.state.box);
     }).catch(error => console.log('error', error));
       //END OF CLARIFAI REST API
   }//end of onButtonClick
@@ -175,7 +176,7 @@ class App extends Component {
                 onButtonSubmit={this.onButtonSubmit}
               />
               <FaceRecognition 
-                box={this.state.box}
+                box={box}
                 imageUrl={imageUrl} />
             </div>
           : (

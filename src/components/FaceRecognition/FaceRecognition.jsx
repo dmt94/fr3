@@ -1,4 +1,3 @@
-import React from 'react';
 import BoundingBox from '../BoundingBox/BoundingBox';
 import './FaceRecognition.css';
 
