@@ -2,6 +2,7 @@
   background: rgba(236, 232, 238, 0.122);
   backdrop-filter: blur(3.5px);
   margin-bottom: 90px;
+  justify-content: space-between;
 }
 
 .navbar p {
@@ -9,5 +10,10 @@
 }
 
 .navbrain-logo {
-  width: 50px;
+  width: 80px;
+  margin-left: 10px;
+}
+
+.user-div {
+  display: flex;
 }
