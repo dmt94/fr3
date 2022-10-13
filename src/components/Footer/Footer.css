@@ -10,12 +10,14 @@
 
 #footer h4 {
   font-weight: 700;
-  font-size: 40px;
+  font-size: 30px;
   color: rgb(255, 253, 218);
+  margin: 20px;
 }
 
 .links-div {
   align-self: center;
+  margin: 20px;
 }
 
 .links-div a {
