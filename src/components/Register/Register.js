@@ -30,7 +30,7 @@ class Register extends React.Component {
     } else if (!this.state.email.includes('@')) {
       this.setState({invalidCredentials: true})
       this.setState({registerMsg: 'Please enter a valid email.'})
-    } else if (!this.state.password.match(/[$@#&!]+/) || !this.state.password.match(/[0-9]+/)) {
+    } else if (!this.state.password.match(/[$@#&!]+/) && !this.state.password.match(/[0-9]+/)) {
         this.setState({invalidCredentials: true})
         this.setState({registerMsg: 'Your password must include at least 1 special character AND number'})
       } else {
