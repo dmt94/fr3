@@ -10,7 +10,7 @@
 }
 
 .navbrain-logo {
-  width: 80px;
+  width: 50px;
   margin: 10px;
 }
 
@@ -21,9 +21,8 @@
 
 /* Button */
 .user-btn {
-  border-radius: 8px;
+  border-radius: 3px;
   backdrop-filter: blur(3.5px);
-  box-shadow: rgba(175, 205, 246, 0.457) 4.95px 4.95px 1px;
   margin: 0 20px;
   transition: all 800ms ease-in-out;
   border: none;
@@ -31,8 +30,8 @@
 }
 
 .user-btn:hover {
-  box-shadow: rgba(175, 205, 246, 0) 4.95px 4.95px 1px;
   transition: all 800ms ease-in-out;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .login-btn {
