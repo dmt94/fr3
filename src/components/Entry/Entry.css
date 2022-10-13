@@ -31,6 +31,12 @@
   height: 150px;
 }
 
+.user-name {
+  font-family: 'Cinzel Decorative', cursive;
+  font-weight: 700;
+  color: rgb(255, 251, 176)
+}
+
 .entry-count-div > .entry-info {
   font-size: 15px;
 }

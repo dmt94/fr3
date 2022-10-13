@@ -11,7 +11,8 @@ const Entry = ({name, entries, clear, faceCount, celebrityFaceCount}) => {
           </div>
           <div className='div-msg entry-count-div'>
             <div className='white f3 entry-info'>
-              {`${name}, your current entry count:`}
+              <h4 className='user-name'>${name}</h4>
+              <p>your current entry count:</p>
             </div>
             <div className='entry-number f1'>
               {entries}
