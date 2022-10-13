@@ -47,16 +47,18 @@ class Register extends React.Component {
             name: this.state.name
           })
         })
-        .then(response => response.json())
+        .then(response => {
+          response.json()
+          console.log(response.json());
+          console.log('error found');
+        })
         .then(user => {
           if (user.id) {
             this.props.loadUser(user)
             this.props.onRouteChange('home');
           }
         }).catch(err => {
-          if (err) {
-            console.log('error found');
-          }
+          console.log(err);
         })
       }
   }
