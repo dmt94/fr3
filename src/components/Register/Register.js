@@ -111,7 +111,7 @@ class Register extends React.Component {
                 <p className='invalid-register'>{this.state.registerMsg}</p>
               </div> : 
               <div className='valid-div'>
-                <p className='register-msg'>Welcome! Note: Password must be at least 6 characters long and contain at least 1 number and 1 special character</p>
+                <p className='register-msg'>Welcome! Note: Password must contain at least 1 number and 1 special character</p>
               </div> 
               }
               <div className="">
