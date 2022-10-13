@@ -1,17 +1,11 @@
 .bounding-box {
-  display: flex;
-  flex-direction: column;
   position: absolute;
   border: 2px solid rgb(242, 245, 191);
   border-bottom: 2px solid rgb(217, 255, 190);
   border-radius: 7px;
   background-color: rgba(255, 255, 255, 0.123);
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-  flex-wrap: wrap;
   -webkit-box-pack: center;
-  justify-content: flex-end;
-  align-items: center;
-  align-content: center;
   cursor: pointer;
   transition: all 500ms ease-in-out;
 }
@@ -28,7 +22,6 @@
 }
 
 .celebrity-name {
-  display: flex;
   font-size: 12px;
   font-weight: 500;
   background-color: rgba(247, 241, 190, 0);
@@ -37,21 +30,23 @@
   transition: all 100ms ease-in-out;
   color: black;
   width: 100%;
-  flex-direction: row;
-  justify-content: center;
 }
 
-.face-description-div {
-  display: flex;
-  flex-direction: column;
-}
+/* .face-description-div {
+} */
 
 .prediction-percentage-value {
   font-weight: 800;
   color: rgb(255, 250, 155);
   font-size: 20px;
+  visibility: hidden;
 }
 
 .prediction-percentage {
   font-size: 10px;
+  visibility: hidden;
+}
+
+.prediction-percentage-value:hover, .prediction-percentage:hover {
+  visibility: visible;
 }
