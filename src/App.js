@@ -74,6 +74,7 @@ class App extends Component {
       {
         id: person.id,
         name: person.data.concepts[0].name,
+        prediction: person.data.concepts[0].value,
         value: person.data.concepts[0].value,
         boundingBox: {
           leftCol: person.region_info.bounding_box.left_col * width,

@@ -40,3 +40,12 @@
   flex-direction: row;
   justify-content: center;
 }
+
+.prediction-percentage-value {
+  font-weight: 800;
+  color: rgb(255, 250, 155);
+}
+
+.prediction-percentage {
+  font-size: 20px;
+}
