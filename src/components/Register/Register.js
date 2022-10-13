@@ -31,8 +31,8 @@ class Register extends React.Component {
       this.setState({invalidCredentials: true})
       this.setState({registerMsg: 'Please enter a valid email.'})
     } else if (this.state.password.length < 6 ||
-      (!this.state.password.match(/[$@#&!]+/)) ||
-      (!this.state.name.match(/[0-9]+/))) {
+      !this.state.password.match(/[$@#&!]+/) ||
+      !this.state.name.match(/[0-9]+/)) {
         this.setState({invalidCredentials: true})
         this.setState({registerMsg: 'Your password must be at least 6 characters and include at least 1 special character AND number'})
       } else {
