@@ -1,5 +1,6 @@
 import React from 'react';
 import './Navigation.css'
+import navbrain from './brain-front.png';
 
 const Navigation = ({onRouteChange, isSignedIn}) => {
     if (isSignedIn) {
@@ -16,14 +17,16 @@ const Navigation = ({onRouteChange, isSignedIn}) => {
       return (
         <nav className='navbar' style={{display: 'flex'}}>
           <div className='logo-name'>
-            <h4>Face Recognition</h4>
+            <img src={ navbrain } alt='brain logo' className='navbrain-logo'/>
           </div>
-          <p 
-            onClick={() => onRouteChange('signin')}
-            className='f3 link dim white pa3 pointer'> Sign In </p>
-          <p 
-            onClick={() => onRouteChange('register')}
-            className='f3 link dim white pa3 pointer'> Register </p>
+          <div className='user-div'>
+            <p 
+              onClick={() => onRouteChange('signin')}
+              className='f3 link dim white pa3 pointer'> Sign In </p>
+            <p 
+              onClick={() => onRouteChange('register')}
+              className='f3 link dim white pa3 pointer'> Register </p>
+          </div>
          </nav>
       )
     }

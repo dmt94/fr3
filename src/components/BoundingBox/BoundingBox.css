@@ -14,7 +14,7 @@
 }
 
 .bounding-box:hover {
-  background-color: #403c52d9;
+  background-color: #403c528a;
   transition: all 500ms ease-in-out;
   z-index: 3;
   transform: scale(1.8);
