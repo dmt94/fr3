@@ -27,7 +27,7 @@ const Box = ({ person }) => {
         </p>
       </div>
       <p className='celebrity-name'>
-        {value > 0.07 ? name : null}
+        {value > 0.07 ? name + '?' : null}
       </p>
     </div>
   )
