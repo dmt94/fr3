@@ -14,10 +14,14 @@
   border-radius: 10px;
 }
 
-.main-logo-entry-div, .main-counter-div {
+.main-logo-entry-div, .main-counter-div, .entry-button-div {
   display: flex;
   flex-direction: row;
   margin-bottom: 70px;
+}
+
+.entry-count-div .entry-button-div {
+  margin-bottom: 0;
 }
 
 .main-counter-div {
@@ -79,9 +83,9 @@
 /* Face and Celebrity Counter */
 
 .counter {
-  font-size: 65px;
+  font-size: 80px;
   font-weight: 700;
-  margin: 20px 0 19px 0;
+  margin: 11px 0 19px 0;
 }
 
 .counter-div p {

@@ -14,14 +14,16 @@ const Entry = ({name, entries, clear, faceCount, celebrityFaceCount}) => {
               <h4 className='user-name'>{name}</h4>
               <p>your current entry count:</p>
             </div>
-            <div className='entry-number f1'>
-              {entries}
-            </div>
-            <button 
+            <div className='f1 entry-button-div'>
+              <div className='entry-number f1'>
+                {entries}
+              </div>
+              <button 
                 className='clear-btn grow w-38'
                 onClick={clear}
                 >CLEAR
             </button>
+            </div>
           </div>
         </div>
         <div className='main-counter-div'>
