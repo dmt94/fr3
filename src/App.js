@@ -113,7 +113,7 @@ class App extends Component {
   }
 
   resetCelebrityFaceCounter = () => {
-    this.setState(Object.assign(this.state.user, {faceCount: 0}))
+    this.setState(Object.assign(this.state.user, {celebrityCount: 0}))
   }
 
   countCelebrityFace = (data) => {
