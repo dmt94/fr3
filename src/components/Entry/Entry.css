@@ -9,9 +9,18 @@
   flex-direction: column;
 }
 
+.counter-div {
+  margin: 10px;
+  border-radius: 10px;
+}
+
 .main-logo-entry-div, .main-counter-div {
   display: flex;
   flex-direction: row;
+}
+
+.main-counter-div {
+  justify-content: center;
 }
 
 .entry-count-div {
@@ -61,8 +70,13 @@
 /* Face and Celebrity Counter */
 
 .counter {
-  font-size: 40px;
+  font-size: 44px;
   font-weight: 700;
+}
+
+.counter-div p {
+  font-weight: 700;
+  margin: 10px;
 }
 
 .box-number-faces, .box-number-celebrities {
