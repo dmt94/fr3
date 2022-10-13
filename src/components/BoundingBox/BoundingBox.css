@@ -8,26 +8,26 @@
   -webkit-box-pack: center;
   cursor: pointer;
   transition: all 500ms ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .bounding-box:hover {
   background-color: #403c52d9;
   transition: all 500ms ease-in-out;
   z-index: 3;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  transform: scale(1.5);
 }
 .bounding-box:hover .celebrity-name {
   visibility: visible;
   transition: all 100ms ease-in-out;
   background-color: rgb(247, 241, 190);
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-  font-size: 10px;
 }
 
 .celebrity-name {
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 500;
   background-color: rgba(247, 241, 190, 0);
   height: auto;
@@ -44,12 +44,12 @@
   font-weight: 800;
   color: rgb(255, 250, 155);
   visibility: hidden;
-  font-size: 10px;
+  font-size: 14px;
   margin: 0;
 }
 
 .prediction-percentage {
-  font-size: 5px;
+  font-size: 9px;
   visibility: hidden;
 }
 
