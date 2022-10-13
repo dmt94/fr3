@@ -7,6 +7,7 @@ import Signin from './components/Signin/Signin';
 import Register from './components/Register/Register';
 import './App.css';
 import ParticlesBg from 'particles-bg';
+import Footer from './components/Footer/Footer';
 
 window.process = {
   env: {
@@ -234,6 +235,7 @@ class App extends Component {
                 onRouteChange={this.onRouteChange} />
           ) 
         }
+        <Footer />
     </div>
     );
   }
