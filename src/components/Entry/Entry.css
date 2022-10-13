@@ -70,13 +70,16 @@
 /* Face and Celebrity Counter */
 
 .counter {
-  font-size: 44px;
+  font-size: 65px;
   font-weight: 700;
+  margin: 20px 0 19px 0;
 }
 
 .counter-div p {
   font-weight: 700;
-  margin: 10px;
+  margin-top: 40px;
+  width: 80%;
+  align-self: center;
 }
 
 .box-number-faces, .box-number-celebrities {
