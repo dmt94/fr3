@@ -61,20 +61,20 @@
 }
 
 .clear-btn {
-  background: rgba(238, 237, 255, 0.644);
-  border-radius: 9px;
+  background: rgb(252 251 221 / 75%);
+  border-radius: 4px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5.8px);
   -webkit-backdrop-filter: blur(5.8px);
   border: 0.7px solid rgb(255, 244, 207);
-  color: rgb(34, 33, 41);
+  color: #2b2c30;
   font-weight: 700;
   transition: all 500ms ease-in-out;
   letter-spacing: 2px;
-  padding: 4px;
+  padding: 10px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   align-self: center;
-  font-size: 17px;
+  font-size: 12px;
   margin-left: 10px;
 }
 
