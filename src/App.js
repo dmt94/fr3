@@ -108,6 +108,23 @@ class App extends Component {
       })
   }
 
+  countFace = (data) => {
+    this.setState(Object.assign(this.state.user, {faceCount: data.length}))
+  }
+
+  resetCelebrityFaceCounter = () => {
+    this.setState(Object.assign(this.state.user, {faceCount: 0}))
+  }
+
+  countCelebrityFace = (data) => {
+    data.forEach(person => {
+      let celebrityPossibility = person.data.concepts[0].value
+      if (celebrityPossibility > 0.11) {
+        this.setState(Object.assign(this.state.user, {celebrityCount: (this.state.user.celebrityCount + 1)}))
+      }
+    })
+  }
+
   onInputChange = (event) => {
     this.setState({input: event.target.value});
   }
@@ -137,6 +154,9 @@ class App extends Component {
           }
           console.log(res.outputs[0].data.regions);
           this.displayFaceBox(this.calculateFaceLocation(res));
+          this.countFace(res.outputs[0].data.regions);
+          this.resetCelebrityFaceCounter();
+          this.countCelebrityFace(res.outputs[0].data.regions);
           //create function that counts number of faces and number of celebrity faces
       }).catch(error => console.log('error', error));
         //END OF CLARIFAI REST API
