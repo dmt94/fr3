@@ -18,3 +18,18 @@
   display: flex;
   align-items: center;
 }
+
+/* Button */
+.user-btn {
+  border-radius: 12px;
+  backdrop-filter: blur(3.5px);
+  box-shadow: rgba(175, 205, 246, 0.603) 8.95px 8.95px 1px;
+}
+
+.login-btn {
+  background-color: rgba(240, 248, 255, 0.631);
+}
+
+.reg-btn {
+  background-color: rgba(214, 204, 255, 0.433);
+}

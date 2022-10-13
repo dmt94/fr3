@@ -20,12 +20,12 @@ const Navigation = ({onRouteChange, isSignedIn}) => {
             <img src={ navbrain } alt='brain logo' className='navbrain-logo'/>
           </div>
           <div className='user-div'>
-            <p 
+            <button 
               onClick={() => onRouteChange('signin')}
-              className='f3 link dim white pa3 pointer'> Sign In </p>
-            <p 
+              className='f3 link dim white pa3 pointer login-btn user-btn'> Sign In </button>
+            <button 
               onClick={() => onRouteChange('register')}
-              className='f3 link dim white pa3 pointer'> Register </p>
+              className='f3 link dim white pa3 pointer reg-btn user-btn'> Register </button>
           </div>
          </nav>
       )
