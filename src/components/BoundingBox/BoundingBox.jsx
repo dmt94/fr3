@@ -20,7 +20,7 @@ const Box = ({ person }) => {
       >
       <div className='face-description-div'>
         <p className='prediction-percentage'>
-          {prediction > 0.07 ? 'Prediction Percent:' : null}
+          {prediction > 0.07 ? 'Prediction:' : null}
         </p>
         <p className='prediction-percentage-value'>
           {prediction > 0.07 ? `${percent}%` : null}
