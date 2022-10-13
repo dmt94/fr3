@@ -12,10 +12,15 @@
 }
 
 .links-div {
-  display: flex;
-  justify-content: space-around;
+  align-self: center;
 }
 
 .links-div a {
   font-size: 12px;
+  margin: 8px;
+  color: white;
+}
+
+.credit-span a {
+  color: white;
 }

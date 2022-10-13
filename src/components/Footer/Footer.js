@@ -12,7 +12,7 @@ const Footer = () => {
         <a href='https://github.com/dmt94/fr34' className='links'>Source Code</a>
       </div>
       <div>
-        <span>Logos and Favicons made by <a href='https://www.flaticon.com/authors/eucalyp'>Eucalyp</a></span>
+        <span className='credit-span'>Logos and Favicons made by <a href='https://www.flaticon.com/authors/eucalyp'>Eucalyp</a></span>
       </div>
     </footer>
   )
