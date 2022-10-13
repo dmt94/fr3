@@ -17,7 +17,7 @@
   background-color: #403c52d9;
   transition: all 500ms ease-in-out;
   z-index: 3;
-  transform: scale(1);
+  transform: scale(1.8);
 }
 .bounding-box:hover .celebrity-name {
   visibility: visible;
