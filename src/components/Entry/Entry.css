@@ -4,6 +4,10 @@
   font-weight: 700;
 }
 
+.entry-info p {
+  margin-bottom: 0;
+}
+
 .main-div, .counter-div {
   display: flex;
   flex-direction: column;
@@ -22,6 +26,7 @@
 
 .entry-count-div .entry-button-div {
   margin-bottom: 0;
+  justify-content: space-evenly;
 }
 
 .main-counter-div {
@@ -52,6 +57,7 @@
   color: rgb(210, 245, 142);
   text-align: center;
   margin: 8px 0 8px 0;
+  font-size: 80px;
 }
 
 .clear-btn {
@@ -69,6 +75,7 @@
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   align-self: center;
   font-size: 17px;
+  margin-left: 10px;
 }
 
 .clear-btn:hover {
