@@ -25,15 +25,14 @@
   backdrop-filter: blur(3.5px);
   box-shadow: rgba(175, 205, 246, 0.457) 4.95px 4.95px 1px;
   margin: 0 20px;
-  transition: all 500ms ease-in-out;
+  transition: all 800ms ease-in-out;
   border: none;
   padding: 7px;
 }
 
 .user-btn:hover {
   box-shadow: rgba(175, 205, 246, 0) 4.95px 4.95px 1px;
-  transition: all 500ms ease-in-out;
-  transform:translate(8.95px, 8.95px)
+  transition: all 800ms ease-in-out;
 }
 
 .login-btn {
