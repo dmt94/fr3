@@ -22,9 +22,9 @@ const Box = ({ person }) => {
         <p className='prediction-percentage'>
           Prediction Percent:
         </p>
-        <h2 className='prediction-percentage-value'>
+        <p className='prediction-percentage-value'>
           {prediction > 0.07 ? `${percent}%` : null}
-        </h2>
+        </p>
       </div>
       <p className='celebrity-name'>
         {value > 0.07 ? name : null}
