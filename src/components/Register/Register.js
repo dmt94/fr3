@@ -54,7 +54,9 @@ class Register extends React.Component {
             this.props.onRouteChange('home');
           }
         }).catch(err => {
-          console.log(err);
+          if (err) {
+            console.log('error found');
+          }
         })
       }
   }
