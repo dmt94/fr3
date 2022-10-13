@@ -17,6 +17,7 @@
 .main-logo-entry-div, .main-counter-div {
   display: flex;
   flex-direction: row;
+  margin-bottom: 70px;
 }
 
 .main-counter-div {
@@ -34,7 +35,9 @@
 .user-name {
   font-family: 'Cinzel Decorative', cursive;
   font-weight: 700;
-  color: rgb(255, 251, 176)
+  color: rgb(255, 251, 176);
+  margin: 0;
+  font-size: 40px;
 }
 
 .entry-count-div > .entry-info {
