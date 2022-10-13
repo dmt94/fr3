@@ -21,9 +21,9 @@
 
 /* Button */
 .user-btn {
-  border-radius: 12px;
+  border-radius: 8px;
   backdrop-filter: blur(3.5px);
-  box-shadow: rgba(175, 205, 246, 0.603) 8.95px 8.95px 1px;
+  box-shadow: rgba(175, 205, 246, 0.457) 4.95px 4.95px 1px;
   margin: 0 20px;
   transition: all 500ms ease-in-out;
   border: none;
@@ -31,7 +31,7 @@
 }
 
 .user-btn:hover {
-  box-shadow: rgba(175, 205, 246, 0) 8.95px 8.95px 1px;
+  box-shadow: rgba(175, 205, 246, 0) 4.95px 4.95px 1px;
   transition: all 500ms ease-in-out;
   transform:translate(8.95px, 8.95px)
 }
@@ -46,7 +46,7 @@
 }
 
 .reg-btn {
-  background-color: rgba(214, 204, 255, 0.433);
+  background-color: rgba(112, 150, 255, 0.433);
 }
 
 .reg-btn:hover {
