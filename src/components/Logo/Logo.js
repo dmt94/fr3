@@ -7,7 +7,7 @@ import brain from './brain.png';
 
 const Logo = () => {
   return (
-    <div className='ma4 mt0'>
+    <div className='main-logo-div'>
       <Tilt className='logo-div'>
         <Tilt className="Tilt br2 shadow-2" options={{max: 55}} style={{height: '150px', width: '150px',}}>
           <div className='inner-tilt'>

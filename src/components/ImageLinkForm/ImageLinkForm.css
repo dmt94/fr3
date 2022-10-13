@@ -17,11 +17,10 @@
 }
 
 .btn-custom {
-  background-color: rgb(154, 146, 243);
+  background-color:#feffda85;
   color: rgb(32, 19, 79);
   border: none;
   text-transform: uppercase;
-  letter-spacing: 2px;
   font-weight: 500;
 
 }
