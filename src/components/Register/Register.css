@@ -7,10 +7,15 @@
 }
 
 .invalid-register {
-  color: rgb(101, 30, 30);
-  font-weight: 700;
+  color: rgb(157, 21, 21);
+  font-size: 13px;
 }
 
 .register-msg {
-  color: rgb(41, 23, 181);
+  color: #362793;
+}
+
+.invalid-register, .register-msg {
+  font-size: 12px;
+  font-weight: 700;
 }
