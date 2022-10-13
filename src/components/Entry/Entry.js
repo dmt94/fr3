@@ -32,7 +32,7 @@ const Entry = ({name, entries, clear, faceCount, celebrityFaceCount}) => {
             <h4 className='counter number-face-count'>{faceCount}</h4>
           </div>
           <div className='counter-div box-number-celebrities'>
-            <p>NUMBER OF POSSIBLE CELEBRITIES DETECTED</p>
+            <p>NUMBER OF POSSIBLE PUBLIC FIGURES DETECTED</p>
             <h4 className='counter number-celebrity-face-count'>{celebrityFaceCount}</h4>
           </div>
         </div>
