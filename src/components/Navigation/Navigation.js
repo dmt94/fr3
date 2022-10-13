@@ -22,10 +22,10 @@ const Navigation = ({onRouteChange, isSignedIn}) => {
           <div className='user-div'>
             <button 
               onClick={() => onRouteChange('signin')}
-              className='f3 link dim white pa3 pointer login-btn user-btn'> Sign In </button>
+              className='f3 link white pa3 pointer login-btn user-btn'> Sign In </button>
             <button 
               onClick={() => onRouteChange('register')}
-              className='f3 link dim white pa3 pointer reg-btn user-btn'> Register </button>
+              className='f3 link white pa3 pointer reg-btn user-btn'> Register </button>
           </div>
          </nav>
       )

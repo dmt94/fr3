@@ -24,12 +24,28 @@
   border-radius: 12px;
   backdrop-filter: blur(3.5px);
   box-shadow: rgba(175, 205, 246, 0.603) 8.95px 8.95px 1px;
+  margin: 0 10px 0 10px;
+  transition: all 500ms ease-in-out;
+  border: none;
 }
 
 .login-btn {
   background-color: rgba(240, 248, 255, 0.631);
 }
 
+.login-btn:hover {
+  color: rgb(24, 39, 110);
+}
+
 .reg-btn {
   background-color: rgba(214, 204, 255, 0.433);
+}
+
+.reg-btn:hover {
+  color: rgb(23, 0, 139);
+}
+
+.user-btn:hover {
+  box-shadow: rgba(175, 205, 246, 0) 8.95px 8.95px 1px;
+  transition: all 500ms ease-in-out;
 }
