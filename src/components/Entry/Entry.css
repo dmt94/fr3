@@ -4,7 +4,12 @@
   font-weight: 700;
 }
 
-.main-logo-entry-div {
+.main-div, .counter-div {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-logo-entry-div, .main-counter-div {
   display: flex;
   flex-direction: row;
 }
@@ -51,4 +56,29 @@
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   border: 0.7px solid rgb(255, 244, 207);
   transition: all 500ms ease-in-out;
+}
+
+/* Face and Celebrity Counter */
+
+.counter {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.box-number-faces, .box-number-celebrities {
+  background: linear-gradient(134deg, #aa95dbc2, #3b3a6eda);
+  backdrop-filter: blur( 3.5px );
+  -webkit-backdrop-filter: blur( 3.5px );
+}
+
+.main-counter-div .box-number-celebrities {
+  background: linear-gradient(134deg, #B6A89A, #F5F1C4);
+}
+
+.number-celebrity-face-count, .box-number-celebrities > p {
+  color: #4D4C6C;
+}
+
+.number-face-count, .box-number-faces > p {
+  color: #E4FFE3;
 }

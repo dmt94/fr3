@@ -119,7 +119,7 @@ class App extends Component {
   countCelebrityFace = (data) => {
     data.forEach(person => {
       let celebrityPossibility = person.data.concepts[0].value
-      if (celebrityPossibility > 0.11) {
+      if (celebrityPossibility > 0.07) {
         this.setState(Object.assign(this.state.user, {celebrityCount: (this.state.user.celebrityCount + 1)}))
       }
     })
@@ -210,14 +210,18 @@ class App extends Component {
               <Entry 
                 clear={this.onClearButtonSubmit}
                 name={this.state.user.name} 
-                entries={this.state.user.entries}  />
+                entries={this.state.user.entries}
+                faceCount={this.state.user.faceCount}
+                celebrityFaceCount={this.state.user.celebrityCount}
+                />
               <ImageLinkForm 
                 onInputChange={this.onInputChange} 
                 onButtonSubmit={this.onButtonSubmit}
               />
               <FaceRecognition 
                 box={box}
-                imageUrl={imageUrl} />
+                imageUrl={imageUrl}
+                />
             </div>
           : (
               route === 'signin'
