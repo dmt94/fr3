@@ -49,7 +49,7 @@ class Register extends React.Component {
         })
         .then(response => {
           response.json()
-          console.log(response.json());
+          console.log(response);
           console.log('error found');
         })
         .then(user => {
