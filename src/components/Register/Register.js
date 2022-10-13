@@ -23,10 +23,6 @@ class Register extends React.Component {
     this.setState({password: event.target.value})
   }
 
-  checkExistingUsers = (email) => {
-
-  }
-
   onSubmitSignIn = () => {
     if (this.state.name === '' || this.state.name.match(/[$@#&!]+/) || this.state.name.match(/[0-9]+/)) {
       this.setState({invalidCredentials: true})
