@@ -17,7 +17,7 @@
 }
 
 .bounding-box:hover {
-  background-color: rgba(99, 80, 60, 0.137);
+  background-color: #403c52d9;
   transition: all 500ms ease-in-out;
   z-index: 3;
 }
@@ -29,7 +29,6 @@
 
 .celebrity-name {
   display: flex;
-  text-align: center;
   font-size: 12px;
   font-weight: 500;
   background-color: rgba(247, 241, 190, 0);
@@ -37,4 +36,7 @@
   visibility: hidden;
   transition: all 100ms ease-in-out;
   color: black;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
 }
