@@ -105,7 +105,6 @@ class App extends Component {
     })
       .then(res => res.json())
       .then(newEntry => {
-        console.log(newEntry);
         this.setState(Object.assign(this.state.user, { entries: newEntry}))
       })
   }
@@ -154,7 +153,6 @@ class App extends Component {
                 this.setState(Object.assign(this.state.user, { entries: count }))
               })
           }
-          console.log(res.outputs[0].data.regions);
           this.displayFaceBox(this.calculateFaceLocation(res));
           this.countFace(res.outputs[0].data.regions);
           this.resetCelebrityFaceCounter();
