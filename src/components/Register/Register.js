@@ -25,16 +25,16 @@ class Register extends React.Component {
 
   onSubmitSignIn = () => {
     if (this.state.name === '' || this.state.name.match(/[$@#&!]+/) || this.state.name.match(/[0-9]+/)) {
+      this.setState({invalidCredentials: true})
       this.setState({registerMsg: 'Please enter a valid name.'})
-      this.setState({invalidCredentials: true})
     } else if (!this.state.email.includes('@')) {
-      this.setState({registerMsg: 'Please enter a valid email.'})
       this.setState({invalidCredentials: true})
+      this.setState({registerMsg: 'Please enter a valid email.'})
     } else if (this.state.password.length < 6 ||
       (!this.state.password.match(/[$@#&!]+/)) ||
       (!this.state.name.match(/[0-9]+/))) {
-        this.setState({registerMsg: 'Your password must be at least 6 characters and include at least 1 special character AND number'})
         this.setState({invalidCredentials: true})
+        this.setState({registerMsg: 'Your password must be at least 6 characters and include at least 1 special character AND number'})
       } else {
         fetch('https://frozen-eyrie-32291.herokuapp.com/register', {
           method: 'post',
