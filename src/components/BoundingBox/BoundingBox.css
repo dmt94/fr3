@@ -17,7 +17,7 @@
   background-color: #403c52d9;
   transition: all 500ms ease-in-out;
   z-index: 3;
-  transform: scale(1.9);
+  transform: scale(1);
 }
 .bounding-box:hover .celebrity-name {
   visibility: visible;
@@ -27,7 +27,7 @@
 }
 
 .celebrity-name {
-  font-size: 10px;
+  font-size: 7px;
   font-weight: 500;
   background-color: rgba(247, 241, 190, 0);
   height: auto;
@@ -44,13 +44,14 @@
   font-weight: 800;
   color: rgb(255, 250, 155);
   visibility: hidden;
-  font-size: 12px;
+  font-size: 8px;
   margin: 0;
 }
 
 .prediction-percentage {
-  font-size: 9px;
+  font-size: 5px;
   visibility: hidden;
+  font-weight: 700;
 }
 
 .bounding-box:hover .prediction-percentage-value, .bounding-box:hover .prediction-percentage {

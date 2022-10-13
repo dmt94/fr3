@@ -14,7 +14,10 @@ const Navigation = ({onRouteChange, isSignedIn}) => {
    
     } else {
       return (
-        <nav className='navbar' style={{display: 'flex', justifyContent: 'flex-end'}}>
+        <nav className='navbar' style={{display: 'flex'}}>
+          <div className='logo-name'>
+            <h4>Face Recognition</h4>
+          </div>
           <p 
             onClick={() => onRouteChange('signin')}
             className='f3 link dim white pa3 pointer'> Sign In </p>
