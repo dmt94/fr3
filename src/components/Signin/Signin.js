@@ -81,7 +81,7 @@ class Signin extends React.Component {
                   <p className='invalid-credential-warning'>Invalid Credentials. Check that your information is correct.</p>
                 </div> : 
                 <div className='valid-div'>
-                  <p className='welcome-message'>Welcome!</p>
+                  <p className='welcome-message'>Welcome Back!</p>
                 </div> 
               }
               <div className="">

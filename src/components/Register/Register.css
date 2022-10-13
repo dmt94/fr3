@@ -5,3 +5,12 @@
 .register-input:hover {
   background-color: rgb(198, 212, 249);
 }
+
+.invalid-register {
+  color: rgb(101, 30, 30);
+  font-weight: 700;
+}
+
+.register-msg {
+  color: rgb(41, 23, 181);
+}
