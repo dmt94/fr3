@@ -1,0 +1,21 @@
+#footer {
+  background-color: #19191ad1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+}
+
+#footer h4 {
+  font-weight: 700;
+}
+
+.links-div {
+  display: flex;
+  justify-content: space-around;
+}
+
+.links-div a {
+  font-size: 12px;
+}
