@@ -6,6 +6,7 @@ const Footer = () => {
   return (
     <footer id="footer">
       <h4>CREATED BY DMT</h4>
+      <p>Creatively Curated with React</p>
       <div className='links-div'>
         <a href='https://github.com/dmt94' className='links'>GitHub</a>
         <a href='https://github.com/dmt94' className='links'>My Website</a>
