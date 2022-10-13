@@ -48,8 +48,8 @@ class Register extends React.Component {
           })
         })
         .then(response => {
-          console.log(response);
-          if(response === 'unable to register') {
+          console.log(response.json());
+          if(response.json() === 'unable to register') {
             this.setState({invalidCredentials: true})
             this.setState({registerMsg: 'Email is already in use. Please log in or use another email'})
           }
