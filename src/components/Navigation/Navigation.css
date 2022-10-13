@@ -27,15 +27,22 @@
   margin: 0 20px;
   transition: all 500ms ease-in-out;
   border: none;
+  padding: 7px;
+}
+
+.user-btn:hover {
+  box-shadow: rgba(175, 205, 246, 0) 8.95px 8.95px 1px;
+  transition: all 500ms ease-in-out;
+  transform:translate(8.95px, 8.95px)
 }
 
 .login-btn {
   background-color: rgba(109, 101, 191, 0.631);
-  padding: 7px;
 }
 
 .login-btn:hover {
   color: rgb(24, 39, 110);
+  background-color: rgba(172, 164, 252, 0.815);
 }
 
 .reg-btn {
@@ -44,10 +51,6 @@
 
 .reg-btn:hover {
   color: rgb(23, 0, 139);
+  background-color: rgba(255, 248, 225, 0.556);
 }
 
-.user-btn:hover {
-  box-shadow: rgba(175, 205, 246, 0) 8.95px 8.95px 1px;
-  transition: all 500ms ease-in-out;
-  transform:translate(8.95px, 8.95px)
-}
