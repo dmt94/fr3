@@ -65,9 +65,10 @@
   font-weight: 700;
   transition: all 500ms ease-in-out;
   letter-spacing: 2px;
-  padding: 8px;
+  padding: 4px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   align-self: center;
+  font-size: 17px;
 }
 
 .clear-btn:hover {
